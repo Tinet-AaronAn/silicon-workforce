@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚀 我的工作空间</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    color: #e0e0e0;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    padding: 30px 0 20px;
+  }
+  .header h1 {
+    font-size: 2em;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5, #f953c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .header p {
+    color: #888;
+    font-size: 0.9em;
+  }
+  .search-box {
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 12px 20px 12px 44px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s;
+  }
+  .search-box input:focus {
+    border-color: #3a7bd5;
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 0 20px rgba(58,123,213,0.2);
+  }
+  .search-box input::placeholder { color: #666; }
+  .search-box .icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1em;
+    color: #666;
+  }
+  .grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+    padding: 10px 0 40px;
+  }
+  .category {
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s;
+  }
+  .category:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.1);
+  }
+  .category-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .link-list { list-style: none; }
+  .link-list li { margin-bottom: 6px; }
+  .link-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.2s;
+    font-size: 0.92em;
+  }
+  .link-list a:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    transform: translateX(4px);
+  }
+  .link-list a .emoji { font-size: 1.2em; flex-shrink: 0; }
+  .link-list a .name { flex: 1; }
+  .link-list a .badge {
+    font-size: 0.7em;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: rgba(58,123,213,0.3);
+    color: #7ab3ff;
+  }
+  .link-list a .badge.private {
+    background: rgba(249,83,198,0.2);
+    color: #f953c6;
+  }
+  .footer {
+    text-align: center;
+    padding: 30px;
+    color: #444;
+    font-size: 0.8em;
+  }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🚀 我的工作空间</h1>
+  <p>常用工具与资源 · 一键直达</p>
+</div>
+
+<div class="search-box">
+  <span class="icon">🔍</span>
+  <input type="text" id="search" placeholder="搜索工具或链接..." autocomplete="off">
+</div>
+
+<div class="grid" id="grid">
+
+  <!-- GitHub 项目 -->
+  <div class="category">
+    <div class="category-title">📦 GitHub 项目</div>
+    <ul class="link-list">
+      <li><a href="https://github.com/Tinet-AaronAn/zijianfit" target="_blank"><span class="emoji">💪</span><span class="name">zijianfit - 自健健身</span></a></li>
+      <li><a href="https://github.com/Tinet-AaronAn/cticloud-agentsdk-demo" target="_blank"><span class="emoji">🤖</span><span class="name">CTICloud AgentSDK Demo</span></a></li>
+      <li><a href="https://github.com/Tinet-AaronAn/openclaw-monitor" target="_blank"><span class="emoji">📊</span><span class="name">OpenClaw Monitor</span></a></li>
+      <li><a href="https://github.com/Tinet-AaronAn/www.flyflux.cn" target="_blank"><span class="emoji">✈️</span><span class="name">FlyFlux 网站</span><span class="badge private">private</span></a></li>
+      <li><a href="https://github.com/Tinet-AaronAn/docs.cticloud" target="_blank"><span class="emoji">📖</span><span class="name">CTICloud 文档</span></a></li>
+      <li><a href="https://github.com/Tinet-AaronAn/claw-code" target="_blank"><span class="emoji">⭐</span><span class="name">Claw Code (fork)</span></a></li>
+      <li><a href="https://github.com/Tinet-AaronAn" target="_blank"><span class="emoji">🏠</span><span class="name">GitHub 主页</span></a></li>
+    </ul>
+  </div>
+
+  <!-- CTICloud 平台 -->
+  <div class="category">
+    <div class="category-title">☁️ CTICloud 平台</div>
+    <ul class="link-list">
+      <li><a href="https://docs.cticloud.cn/docs/api-operations-1" target="_blank"><span class="emoji">📘</span><span class="name">CTICloud API 文档</span></a></li>
+      <li><a href="https://tinet-aaronan.github.io/cticloud-agentsdk-demo/" target="_blank"><span class="emoji">🌐</span><span class="name">AgentSDK Demo 在线预览</span></a></li>
+    </ul>
+  </div>
+
+  <!-- 开发工具 -->
+  <div class="category">
+    <div class="category-title">🛠️ 开发工具</div>
+    <ul class="link-list">
+      <li><a href="http://localhost:5173" target="_blank"><span class="emoji">⚡</span><span class="name">Vite Dev Server (5173)</span><span class="badge">local</span></a></li>
+      <li><a href="http://localhost:3001" target="_blank"><span class="emoji">🖥️</span><span class="name">App Server (3001)</span><span class="badge">local</span></a></li>
+      <li><a href="http://localhost:3011" target="_blank"><span class="emoji">📡</span><span class="name">Event Server (3011)</span><span class="badge">local</span></a></li>
+      <li><a href="http://localhost:8081" target="_blank"><span class="emoji">🔧</span><span class="name">Service Port (8081)</span><span class="badge">local</span></a></li>
+      <li><a href="https://github.com" target="_blank"><span class="emoji">🐙</span><span class="name">GitHub</span></a></li>
+    </ul>
+  </div>
+
+  <!-- AI & 研究 -->
+  <div class="category">
+    <div class="category-title">🧠 AI & 研究</div>
+    <ul class="link-list">
+      <li><a href="https://www.swarmvault.ai/" target="_blank"><span class="emoji">🐝</span><span class="name">SwarmVault AI</span></a></li>
+      <li><a href="https://github.com/Pratiyush/llm-wiki" target="_blank"><span class="emoji">📚</span><span class="name">LLM Wiki (Pratiyush)</span></a></li>
+      <li><a href="https://github.com/lucasastorian/llmwiki" target="_blank"><span class="emoji">📚</span><span class="name">LLM Wiki (Astorian)</span></a></li>
+      <li><a href="https://github.com/nashsu/llm_wiki" target="_blank"><span class="emoji">📚</span><span class="name">LLM Wiki (Nashsu)</span></a></li>
+      <li><a href="http://z.ai/" target="_blank"><span class="emoji">🤖</span><span class="name">Z.AI</span></a></li>
+    </ul>
+  </div>
+
+  <!-- OpenClaw -->
+  <div class="category">
+    <div class="category-title">🦞 OpenClaw</div>
+    <ul class="link-list">
+      <li><a href="https://docs.openclaw.ai" target="_blank"><span class="emoji">📖</span><span class="name">OpenClaw 文档</span></a></li>
+      <li><a href="https://github.com/openclaw/openclaw" target="_blank"><span class="emoji">🐙</span><span class="name">OpenClaw GitHub</span></a></li>
+      <li><a href="https://clawhub.ai" target="_blank"><span class="emoji">🏪</span><span class="name">ClawHub 技能市场</span></a></li>
+      <li><a href="https://discord.com/invite/clawd" target="_blank"><span class="emoji">💬</span><span class="name">OpenClaw Discord</span></a></li>
+    </ul>
+  </div>
+
+  <!-- 飞书 -->
+  <div class="category">
+    <div class="category-title">🐦 飞书</div>
+    <ul class="link-list">
+      <li><a href="https://open.feishu.cn" target="_blank"><span class="emoji">🌐</span><span class="name">飞书开放平台</span></a></li>
+      <li><a href="https://open.feishu.cn/document" target="_blank"><span class="emoji">📄</span><span class="name">飞书开发文档</span></a></li>
+      <li><a href="https://applink.feishu.cn/client/app_share/open?appId=cli_a96b655370f99cc9&op_tracking=opshare_profile" target="_blank"><span class="emoji">🤖</span><span class="name">Manager Bot 应用</span></a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  💡 点击任意链接直接跳转 · 使用搜索框快速查找
+</div>
+
+<script>
+const search = document.getElementById('search');
+const grid = document.getElementById('grid');
+search.addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  const categories = grid.querySelectorAll('.category');
+  categories.forEach(cat => {
+    const links = cat.querySelectorAll('.link-list a');
+    let anyVisible = false;
+    links.forEach(a => {
+      const text = a.textContent.toLowerCase();
+      if (!q || text.includes(q)) {
+        a.parentElement.classList.remove('hidden');
+        anyVisible = true;
+      } else {
+        a.parentElement.classList.add('hidden');
+      }
+    });
+    cat.classList.toggle('hidden', !anyVisible);
+  });
+});
+</script>
+
+</body>
+</html>
